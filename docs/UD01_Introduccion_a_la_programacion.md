@@ -163,7 +163,7 @@ Los lenguajes de programación se pueden clasificar según dos criterios:
 
 ### Cómo funciona el intérprete
 
-El intérprete hace las funciones de compilador, pero en vez de revisar todo el código primero antes de generar el código objeto, lo hace de la siguiente forma:
+El intérprete hace las funciones de compilador, pero en vez de revisar todo el código, antes de generar el código objeto, lo hace de la siguiente forma:
 
 1. Comprueba la primera instrucción del código fuente.
 2. Si la instrucción tiene errores de sintaxis, para la ejecución y da un error.
@@ -234,12 +234,23 @@ Los lenguajes de programación también se pueden clasificar según su **paradig
 
 ## Tipado
 
-Los lenguajes utilizan variables y constantes para almacenar los datos que varían a lo largo de la ejecución de un programa.
+Los lenguajes utilizan variables y constantes para almacenar datos a lo largo de la ejecución de un programa. La forma en que gestionan y comprueban los tipos de datos se clasifica según dos criterios:
 
-En función del tratamiento de estas variables, constantes y sus tipos, tenemos dos clasificaciones de lenguajes:
+### 1. Según cuándo se comprueba el tipo (Estático vs. Dinámico)
 
-- **Fuertemente tipados:** en el momento de escribir el programa, cada variable tendrá asignado un tipo (ej.: Java, C).
-- **Débilmente tipados:** el programador no tiene que definir el tipo de las variables, y las conversiones entre estos suelen hacerse de forma automática por el compilador o intérprete (ej.: Python, JavaScript).
+- **Tipado estático:** El tipo de una variable se define o infiere durante la fase de compilación (antes de ejecutar el programa). Una variable no puede cambiar de tipo.
+  - *Ejemplos:* Java, C, C++, Rust.
+- **Tipado dinámico:** El tipo no se asocia a la variable, sino al valor que contiene en cada momento. Se evalúa en tiempo de ejecución y una misma variable puede reasignarse con datos de distinto tipo.
+  - *Ejemplos:* Python, JavaScript, PHP.
+
+### 2. Según la tolerancia a las conversiones implícitas (Fuerte vs. Débil)
+
+- **Tipado fuerte:** El lenguaje no permite realizar operaciones entre tipos incompatibles sin una conversión explícita. Evita la conversión implícita no intencionada.
+  - *Ejemplos:* Python, Java. 
+  - *En Python:* `"Texto" + 5` produce un error (`TypeError`).
+- **Tipado débil:** El lenguaje realiza conversiones implícitas de tipo (coerción) de forma automática al combinar distintos tipos en una operación.
+  - *Ejemplos:* JavaScript, C.
+  - *En JavaScript:* `"Texto" + 5` convierte el `5` a cadena y da `"Texto5"`.
 
 ## Evolución de los lenguajes de programación
 
