@@ -1,0 +1,1016 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://JoseAngelSeveroOchoa.github.io/Entornos-de-desarrollo/">
+      
+      
+      
+        <link rel="next" href="UD01_Introduccion_a_la_programacion/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>ENTORNOS DE DESARROLLO</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#presentacion-del-curso" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="." title="ENTORNOS DE DESARROLLO" class="md-header__button md-logo" aria-label="ENTORNOS DE DESARROLLO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ENTORNOS DE DESARROLLO
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Inicio
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="ENTORNOS DE DESARROLLO" class="md-nav__button md-logo" aria-label="ENTORNOS DE DESARROLLO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ENTORNOS DE DESARROLLO
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-informacion-general-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Información General del Módulo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Información General del Módulo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#horario-semanal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Horario Semanal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-resultados-de-aprendizaje-ra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Resultados de Aprendizaje (RA)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-temporalizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Temporalización
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-criterios-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Criterios de Evaluación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Criterios de Evaluación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ponderacion-por-resultado-de-aprendizaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ponderación por Resultado de Aprendizaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-herramientas-necesarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Herramientas Necesarias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-resumen-de-contenidos-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Resumen de Contenidos del Módulo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Resumen de Contenidos del Módulo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bloques-que-estudiaremos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloques que Estudiaremos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bloques que Estudiaremos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lenguajes-de-programacion-y-entornos-de-desarrollo-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lenguajes de programación y entornos de desarrollo (IDE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-de-versiones-git-y-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control de versiones: Git y GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ingenieria-del-software-y-proceso-de-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ingeniería del software y proceso de desarrollo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uml-aplicado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UML aplicado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pruebas-y-depuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pruebas y depuración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refactorizacion-y-optimizacion-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refactorización y optimización de código
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidades
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidades
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="UD01_Introduccion_a_la_programacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD01_Introduccion_a_la_programacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-informacion-general-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Información General del Módulo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Información General del Módulo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#horario-semanal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Horario Semanal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-resultados-de-aprendizaje-ra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Resultados de Aprendizaje (RA)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-temporalizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Temporalización
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-criterios-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Criterios de Evaluación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Criterios de Evaluación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ponderacion-por-resultado-de-aprendizaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ponderación por Resultado de Aprendizaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-herramientas-necesarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Herramientas Necesarias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-resumen-de-contenidos-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Resumen de Contenidos del Módulo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Resumen de Contenidos del Módulo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bloques-que-estudiaremos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloques que Estudiaremos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bloques que Estudiaremos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lenguajes-de-programacion-y-entornos-de-desarrollo-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lenguajes de programación y entornos de desarrollo (IDE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-de-versiones-git-y-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control de versiones: Git y GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ingenieria-del-software-y-proceso-de-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ingeniería del software y proceso de desarrollo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uml-aplicado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UML aplicado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pruebas-y-depuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pruebas y depuración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refactorizacion-y-optimizacion-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refactorización y optimización de código
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="presentacion-del-curso">Presentación del curso<a class="headerlink" href="#presentacion-del-curso" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="1-informacion-general-del-modulo">1. Información General del Módulo<a class="headerlink" href="#1-informacion-general-del-modulo" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Curso:</strong> 1º DAM (Desarrollo de Aplicaciones Multiplataforma) - Curso 2026-2027</li>
+<li><strong>Profesor:</strong> [Nombre del profesor] (<a href="mailto:correo@edu.gva.es">correo@edu.gva.es</a>)</li>
+<li><strong>Carga horaria:</strong> 96 horas en total (aprox. 3 horas/semana)</li>
+<li><strong>Centro:</strong> IES Severo Ochoa</li>
+</ul>
+<h3 id="horario-semanal">Horario Semanal<a class="headerlink" href="#horario-semanal" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>[Día]:</strong> [hora inicio] - [hora fin] h</li>
+<li><strong>[Día]:</strong> [hora inicio] - [hora fin] h</li>
+<li><strong>[Día]:</strong> [hora inicio] - [hora fin] h</li>
+</ul>
+<blockquote>
+<p>Este módulo profesional tiene el código <strong>0487</strong> dentro del título de Técnico Superior en Desarrollo de Aplicaciones Multiplataforma, y se cursa en 1º curso.</p>
+</blockquote>
+<hr />
+<h2 id="2-resultados-de-aprendizaje-ra">2. Resultados de Aprendizaje (RA)<a class="headerlink" href="#2-resultados-de-aprendizaje-ra" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>RA1:</strong> Reconoce los elementos y herramientas que intervienen en el desarrollo de un programa informático, analizando sus características y las fases en las que actúan hasta llegar a su puesta en funcionamiento.</li>
+<li><strong>RA2:</strong> Evalúa entornos integrados de desarrollo, analizando sus características para editar código fuente y generar ejecutables.</li>
+<li><strong>RA3:</strong> Verifica el funcionamiento de programas diseñando y realizando pruebas.</li>
+<li><strong>RA4:</strong> Optimiza código empleando las herramientas disponibles en el entorno de desarrollo.</li>
+<li><strong>RA5:</strong> Genera diagramas de clases valorando su importancia en el desarrollo de aplicaciones y empleando las herramientas disponibles en el entorno.</li>
+<li><strong>RA6:</strong> Genera diagramas de comportamiento valorando su importancia en el desarrollo de aplicaciones y empleando las herramientas disponibles en el entorno.</li>
+</ul>
+<hr />
+<h2 id="3-temporalizacion">3. Temporalización<a class="headerlink" href="#3-temporalizacion" title="Permanent link">&para;</a></h2>
+<p>El contenido se distribuye en 6 unidades didácticas organizadas a lo largo de dos evaluaciones <em>(temporalización orientativa)</em>.</p>
+<p>La secuenciación se ha diseñado para introducir <strong>el control de versiones (Git y GitHub) muy pronto</strong>, justo después de los fundamentos de lenguajes y entornos de desarrollo, de forma que el alumnado lo use desde el principio en el resto de prácticas del curso. Los <strong>diagramas UML</strong> se han reducido a lo realmente usado en la industria hoy en día. El módulo cierra con dos bloques fuertes, <strong>Pruebas</strong> y <strong>Refactorización</strong>, dejando esta última para el final, cuando el alumnado ya tiene una base sólida de programación sobre la que optimizar código.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Unidad Didáctica</th>
+<th style="text-align: center;">Evaluación</th>
+<th style="text-align: center;">Horas estimadas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>UD1:</strong> Lenguajes de programación y entornos de desarrollo (IDE)</td>
+<td style="text-align: center;">Primera</td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>UD2:</strong> Control de versiones: Git y GitHub</td>
+<td style="text-align: center;">Primera</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>UD3:</strong> Ingeniería del software y proceso de desarrollo</td>
+<td style="text-align: center;">Primera</td>
+<td style="text-align: center;">14</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>UD4:</strong> UML aplicado: diagramas de clases y de comportamiento</td>
+<td style="text-align: center;">Segunda</td>
+<td style="text-align: center;">14</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>UD5:</strong> Pruebas y depuración</td>
+<td style="text-align: center;">Segunda</td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>UD6:</strong> Refactorización y optimización de código</td>
+<td style="text-align: center;">Segunda</td>
+<td style="text-align: center;">16</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>ℹ️ El contenido de "control de versiones" está encuadrado oficialmente dentro del RA4 (el mismo Resultado de Aprendizaje que la refactorización), aunque aquí se imparta mucho antes. Esto no afecta a la ponderación de dicho RA, que se sigue evaluando de forma acumulada a lo largo del curso (UD2 + UD6).</p>
+</blockquote>
+<hr />
+<h2 id="4-criterios-de-evaluacion">4. Criterios de Evaluación<a class="headerlink" href="#4-criterios-de-evaluacion" title="Permanent link">&para;</a></h2>
+<h3 id="ponderacion-por-resultado-de-aprendizaje">Ponderación por Resultado de Aprendizaje<a class="headerlink" href="#ponderacion-por-resultado-de-aprendizaje" title="Permanent link">&para;</a></h3>
+<p>Ponderación orientativa de los RA dentro del módulo, en función del peso de sus criterios de evaluación:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Resultado de Aprendizaje</th>
+<th style="text-align: center;">Porcentaje</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>RA1:</strong> Elementos y herramientas del desarrollo de software</td>
+<td style="text-align: center;">14%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RA2:</strong> Entornos integrados de desarrollo</td>
+<td style="text-align: center;">16%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RA3:</strong> Verificación y pruebas de programas</td>
+<td style="text-align: center;">22%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RA4:</strong> Optimización de código (incluye control de versiones y refactorización)</td>
+<td style="text-align: center;">18%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RA5:</strong> Diagramas de clases</td>
+<td style="text-align: center;">14%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RA6:</strong> Diagramas de comportamiento</td>
+<td style="text-align: center;">16%</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Condiciones de Evaluación Continua y Autoría</p>
+<ul>
+<li><strong>Asistencia mínima:</strong> Faltar al <strong>15% o más</strong> de las horas implica la pérdida de la evaluación continua, teniendo que realizar un examen final global del módulo.</li>
+<li><strong>Aprobado independiente:</strong> Es necesario <strong>aprobar por separado</strong> cada uno de los Resultados de Aprendizaje.</li>
+<li><strong>Verificación de autoría:</strong> Tras la entrega de cualquier práctica, el docente podrá solicitar que se explique cualquier paso realizado. La imposibilidad de justificar la autoría resultará en la <strong>anulación de la práctica (nota nula)</strong>.</li>
+<li><strong>Pruebas objetivas:</strong> Se realizarán al final de cada unidad utilizando los ordenadores del aula.</li>
+</ul>
+</div>
+<hr />
+<h2 id="5-herramientas-necesarias">5. Herramientas Necesarias<a class="headerlink" href="#5-herramientas-necesarias" title="Permanent link">&para;</a></h2>
+<p>Para el seguimiento de las clases prácticas y teóricas se utilizará:</p>
+<ul>
+<li>Correo del estudiante (Outlook institucional).</li>
+<li>Plataforma de aprendizaje <strong>Aules</strong>.</li>
+<li>Un <strong>JDK</strong> (Java Development Kit) y/o el entorno de ejecución correspondiente al lenguaje de trabajo del aula.</li>
+<li>Un <strong>IDE</strong> (Entorno Integrado de Desarrollo): Eclipse, NetBeans, IntelliJ IDEA o Visual Studio Code, según la unidad.</li>
+<li><strong>Git</strong> y una cuenta de <strong>GitHub</strong>, desde la UD2 y durante todo el resto del curso.</li>
+<li>Herramienta de modelado UML: <strong>Visual Paradigm</strong> (u otra equivalente) para los diagramas de clases y comportamiento.</li>
+<li>Entornos de virtualización (máquinas virtuales).</li>
+</ul>
+<hr />
+<h2 id="6-resumen-de-contenidos-del-modulo">6. Resumen de Contenidos del Módulo<a class="headerlink" href="#6-resumen-de-contenidos-del-modulo" title="Permanent link">&para;</a></h2>
+<h3 id="bloques-que-estudiaremos">Bloques que Estudiaremos<a class="headerlink" href="#bloques-que-estudiaremos" title="Permanent link">&para;</a></h3>
+<h4 id="lenguajes-de-programacion-y-entornos-de-desarrollo-ide">Lenguajes de programación y entornos de desarrollo (IDE)<a class="headerlink" href="#lenguajes-de-programacion-y-entornos-de-desarrollo-ide" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Relación entre el software y los componentes del sistema informático (memoria, procesador, periféricos).</li>
+<li>Clasificación de los lenguajes de programación según su nivel de abstracción y su forma de ejecución.</li>
+<li><strong>Código fuente, código objeto y código ejecutable:</strong> diferencias entre ambos y el papel de las máquinas virtuales.</li>
+<li>Funciones y componentes de un IDE: editor, compilador/intérprete, depurador, asistente de interfaces gráficas.</li>
+<li>Instalación, configuración y personalización de un IDE.</li>
+<li><strong>Entornos propietarios frente a entornos libres:</strong> comparativa de características.</li>
+<li><strong>Ejemplos de software:</strong> Eclipse, NetBeans, IntelliJ IDEA, Visual Studio Code.</li>
+</ul>
+<h4 id="control-de-versiones-git-y-github">Control de versiones: Git y GitHub<a class="headerlink" href="#control-de-versiones-git-y-github" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Por qué versionar el código desde el primer día, aunque se trabaje solo.</li>
+<li>Conceptos básicos: repositorio, commit, rama (<em>branch</em>), <em>merge</em>.</li>
+<li>Flujo de trabajo habitual: <code>clone</code>, <code>add</code>, <code>commit</code>, <code>push</code>, <code>pull</code>.</li>
+<li>Trabajo colaborativo en GitHub: <em>forks</em>, <em>pull requests</em>, resolución de conflictos.</li>
+<li>Integración del control de versiones en el propio IDE.</li>
+<li>Buenas prácticas: mensajes de commit, <code>.gitignore</code>, ramas por funcionalidad.</li>
+</ul>
+<h4 id="ingenieria-del-software-y-proceso-de-desarrollo">Ingeniería del software y proceso de desarrollo<a class="headerlink" href="#ingenieria-del-software-y-proceso-de-desarrollo" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Fases del ciclo de vida de una aplicación: análisis, diseño, codificación, pruebas, documentación, explotación y mantenimiento.</li>
+<li>Modelos de ciclo de vida (cascada, iterativo, ágil) y su relación con el trabajo diario en el IDE.</li>
+<li>Herramientas implicadas en la obtención de código ejecutable a partir del código fuente: compiladores, intérpretes y traductores de lenguajes.</li>
+</ul>
+<h4 id="uml-aplicado">UML aplicado<a class="headerlink" href="#uml-aplicado" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Conceptos básicos de la programación orientada a objetos: clases, atributos, métodos y visibilidad.</li>
+<li><strong>Diagramas de clases:</strong> objetos, instanciación y relaciones (herencia, composición, agregación). Generación de código a partir de un diagrama de clases e <strong>ingeniería inversa</strong>.</li>
+<li><strong>Diagramas de casos de uso:</strong> actores, escenarios y relaciones (inclusión, extensión, generalización). Muy usados para documentar requisitos.</li>
+<li><strong>Diagramas de secuencia:</strong> línea de vida de un objeto, activación y envío de mensajes. Los más usados hoy en día para documentar interacciones y APIs.</li>
+<li><em>Mención breve</em> a los diagramas de actividad como alternativa a un diagrama de flujo clásico. Se deja fuera el diagrama de colaboración, en desuso frente al de secuencia.</li>
+</ul>
+<h4 id="pruebas-y-depuracion">Pruebas y depuración<a class="headerlink" href="#pruebas-y-depuracion" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Tipos de pruebas: funcionales, estructurales, de regresión y unitarias.</li>
+<li>Herramientas de depuración: puntos de ruptura, seguimiento de variables, ejecución paso a paso.</li>
+<li>Introducción a <em>frameworks</em> de pruebas unitarias (p. ej. JUnit).</li>
+<li>Documentación del plan de pruebas.</li>
+</ul>
+<h4 id="refactorizacion-y-optimizacion-de-codigo">Refactorización y optimización de código<a class="headerlink" href="#refactorizacion-y-optimizacion-de-codigo" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Concepto y limitaciones de la refactorización: por qué se hace después de tener el código funcionando y bien probado.</li>
+<li>Patrones de refactorización más habituales.</li>
+<li>Uso de analizadores de código estático.</li>
+<li>Relación entre refactorización, pruebas y control de versiones (una rama de Git por cada refactor).</li>
+<li>Documentación del código: comentarios, convenciones y herramientas de generación automática (por ejemplo, Javadoc).</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
