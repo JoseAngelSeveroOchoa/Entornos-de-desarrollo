@@ -467,7 +467,6 @@ public class HelloWorld {
 }
 ```
 
-> ⚠️ **Nota:** en el ejemplo de Python, la línea `from stat import Fore` no tiene sentido en este programa (`stat` es un módulo de la librería estándar para consultar metadatos de ficheros, y `Fore` no existe en él; `Fore` sí existe en la librería `colorama`, usada para dar color al texto en consola). Además, esa importación no se llega a usar en ningún punto del código. Es probablemente un resto de un ejemplo anterior y conviene quitarla o corregirla para no confundir al alumnado, ya que tal como está el código dará un error de importación al ejecutarse.
 
 ---
 
