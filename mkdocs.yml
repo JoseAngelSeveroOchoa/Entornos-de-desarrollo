@@ -1,0 +1,28 @@
+site_name: ENTORNOS DE DESARROLLO
+site_url: https://JoseAngelSeveroOchoa.github.io/Entornos-de-desarrollo/
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+  language: es
+
+nav:
+  - Inicio: index.md
+  - Unidades:
+    - UD01_Introduccion_a_la_programacion: UD01_Introduccion_a_la_programacion.md
+ 
+ 
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - tables                 # necesario para las tablas Sintaxis/Ejemplo
+  - pymdownx.highlight      # resaltado de sintaxis en los bloques ```
+  - pymdownx.inlinehilite    # resaltado en código inline (`dhcpd.conf`, etc.)
+  - toc:
+      permalink: true       # opcional, añade anclas a los títulos (## 4.1 Declaraciones)

@@ -1,0 +1,2022 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://JoseAngelSeveroOchoa.github.io/Entornos-de-desarrollo/UD01_Introduccion_a_la_programacion/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>UD01_Introduccion_a_la_programacion - ENTORNOS DE DESARROLLO</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ud1-introduccion-a-la-programacion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="ENTORNOS DE DESARROLLO" class="md-header__button md-logo" aria-label="ENTORNOS DE DESARROLLO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ENTORNOS DE DESARROLLO
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD01_Introduccion_a_la_programacion
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ENTORNOS DE DESARROLLO" class="md-nav__button md-logo" aria-label="ENTORNOS DE DESARROLLO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ENTORNOS DE DESARROLLO
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidades
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidades
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD01_Introduccion_a_la_programacion
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD01_Introduccion_a_la_programacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#indice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Índice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-del-hardware-para-el-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uso del hardware para el software
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algoritmo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lenguaje-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lenguaje de programación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lenguajes-de-programacion-tipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lenguajes de programación: tipos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lenguajes de programación: tipos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#segun-nivel-de-abstraccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Según nivel de abstracción
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segun-forma-de-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Según forma de ejecución
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lenguajes-compilados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lenguajes compilados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lenguajes compilados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proceso-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proceso general
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigo-fuente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Código fuente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compilador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compilador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigo-objeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Código objeto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bibliotecas-librerias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bibliotecas (librerías)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enlazador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enlazador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecutable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejecutable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lenguajes-interpretados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lenguajes interpretados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lenguajes interpretados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proceso-general_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proceso general
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona-el-interprete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo funciona el intérprete
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventajas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inconvenientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inconvenientes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilador-vs-interprete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compilador vs. intérprete
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paradigmas-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paradigmas de programación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paradigmas de programación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imperativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Imperativo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declarativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Declarativo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedimental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedimental
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orientado-a-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orientado a objetos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evolucion-de-los-lenguajes-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evolución de los lenguajes de programación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-lenguaje-elegir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué lenguaje elegir?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-fuente-objeto-y-ejecutable-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Código fuente, objeto y ejecutable (resumen)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proceso-de-compilacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proceso de compilación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proceso de compilación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analisis-lexico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análisis léxico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisis-sintactico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análisis sintáctico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisis-semantico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análisis semántico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generacion-del-codigo-intermedio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generación del código intermedio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maquina-virtual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Máquina virtual
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jvm-java-virtual-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JVM (Java Virtual Machine)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entorno-de-desarrollo-integrado-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entorno de desarrollo integrado (IDE)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entorno de desarrollo integrado (IDE)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entornos-ligeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entornos ligeros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entornos-pesados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entornos pesados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-basica-de-un-programa-informatico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura básica de un programa informático
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura básica de un programa informático">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-en-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en Python
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-en-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en Java
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alguna-pregunta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Alguna pregunta?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#indice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Índice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-del-hardware-para-el-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uso del hardware para el software
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algoritmo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lenguaje-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lenguaje de programación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lenguajes-de-programacion-tipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lenguajes de programación: tipos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lenguajes de programación: tipos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#segun-nivel-de-abstraccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Según nivel de abstracción
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segun-forma-de-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Según forma de ejecución
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lenguajes-compilados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lenguajes compilados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lenguajes compilados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proceso-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proceso general
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigo-fuente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Código fuente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compilador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compilador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigo-objeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Código objeto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bibliotecas-librerias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bibliotecas (librerías)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enlazador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enlazador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecutable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejecutable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lenguajes-interpretados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lenguajes interpretados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lenguajes interpretados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proceso-general_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proceso general
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona-el-interprete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo funciona el intérprete
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventajas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inconvenientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inconvenientes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilador-vs-interprete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compilador vs. intérprete
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paradigmas-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paradigmas de programación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paradigmas de programación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imperativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Imperativo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declarativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Declarativo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedimental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedimental
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orientado-a-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orientado a objetos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evolucion-de-los-lenguajes-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evolución de los lenguajes de programación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-lenguaje-elegir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué lenguaje elegir?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-fuente-objeto-y-ejecutable-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Código fuente, objeto y ejecutable (resumen)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proceso-de-compilacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proceso de compilación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proceso de compilación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analisis-lexico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análisis léxico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisis-sintactico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análisis sintáctico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisis-semantico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análisis semántico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generacion-del-codigo-intermedio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generación del código intermedio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maquina-virtual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Máquina virtual
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jvm-java-virtual-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JVM (Java Virtual Machine)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entorno-de-desarrollo-integrado-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entorno de desarrollo integrado (IDE)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entorno de desarrollo integrado (IDE)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entornos-ligeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entornos ligeros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entornos-pesados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entornos pesados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-basica-de-un-programa-informatico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura básica de un programa informático
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura básica de un programa informático">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-en-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en Python
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-en-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en Java
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alguna-pregunta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Alguna pregunta?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ud1-introduccion-a-la-programacion">UD1. Introducción a la programación<a class="headerlink" href="#ud1-introduccion-a-la-programacion" title="Permanent link">&para;</a></h1>
+<h2 id="indice">Índice<a class="headerlink" href="#indice" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Lenguajes de programación<ul>
+<li>Clasificación</li>
+<li>Evolución</li>
+<li>Estructura</li>
+</ul>
+</li>
+<li>Código fuente</li>
+<li>Proceso de compilación</li>
+<li>Máquina Virtual</li>
+<li>Entorno de desarrollo</li>
+</ul>
+<hr />
+<h2 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Un ordenador, la máquina en sí misma, la parte física que se puede tocar, es lo que se denomina <strong>hardware</strong>.</li>
+<li>La propia caja que contiene los componentes electrónicos, el teclado, la pantalla, el ratón, la impresora... todos esos elementos son el hardware.</li>
+<li>En el módulo de <em>Sistemas Informáticos</em> se profundiza con más detalle en estos elementos.</li>
+</ul>
+<h2 id="software">Software<a class="headerlink" href="#software" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Conjunto de programas, datos y documentación que forman una aplicación.</li>
+<li><strong>Tipos:</strong><ul>
+<li><strong>Aplicación:</strong> ofrece un servicio al usuario (procesador de texto, navegador web, etc.).</li>
+<li><strong>Sistema:</strong> gestiona el ordenador (sistema operativo, compiladores, etc.).</li>
+</ul>
+</li>
+</ul>
+<h2 id="uso-del-hardware-para-el-software">Uso del hardware para el software<a class="headerlink" href="#uso-del-hardware-para-el-software" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Memoria:</strong> almacena los datos e instrucciones.</li>
+<li><strong>CPU:</strong> ejecuta las instrucciones almacenadas en la memoria.</li>
+<li><strong>Periféricos E/S:</strong> permiten al usuario introducir datos a tener en cuenta en la ejecución de los programas y visualizar los resultados.</li>
+<li><strong>Buses:</strong> canales de comunicación entre el resto de componentes.</li>
+</ul>
+<h2 id="algoritmo">Algoritmo<a class="headerlink" href="#algoritmo" title="Permanent link">&para;</a></h2>
+<p>Conjunto ordenado y finito de operaciones que permite hallar la solución de un problema.</p>
+<p>Se ejecuta por un ordenador, siendo realizadas multitud de operaciones sencillas, divididas en:</p>
+<ul>
+<li>Operaciones aritméticas (sumar, restar, multiplicar y dividir)</li>
+<li>Operaciones lógicas (operaciones "and", "or", "not" y "xor")</li>
+<li>Comparaciones (si algo es mayor/menor/igual a otra cosa)</li>
+<li>Mover información (entrada/salida de datos, almacenar datos)</li>
+</ul>
+<h2 id="lenguaje-de-programacion">Lenguaje de programación<a class="headerlink" href="#lenguaje-de-programacion" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Conjunto de instrucciones, operadores y reglas de sintaxis y semántica.</li>
+<li>Permiten al programador comunicarse con los dispositivos de <em>hardware</em> y <em>software</em> existentes.</li>
+</ul>
+<p>Sin un lenguaje de programación, un ordenador solo entiende cadenas de ceros y unos (código máquina), algo inviable de manejar directamente para programas de cierto tamaño.</p>
+<p><img alt="Ejemplo de instrucciones dadas a un ordenador en binario" src="../images/01-ejemplo-instrucciones-binarias.png" /></p>
+<hr />
+<h2 id="lenguajes-de-programacion-tipos">Lenguajes de programación: tipos<a class="headerlink" href="#lenguajes-de-programacion-tipos" title="Permanent link">&para;</a></h2>
+<p>Los lenguajes de programación se pueden clasificar según dos criterios:</p>
+<ul>
+<li><strong>Nivel de abstracción:</strong> bajo nivel, nivel medio, alto nivel, 4GL, lenguas naturales.</li>
+<li><strong>Forma de ejecución:</strong> compilado, interpretado, intermedio.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Nivel de abstracción</th>
+<th>Forma de ejecución</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Pirámide de niveles de abstracción: hardware, código máquina, lenguaje de bajo nivel (ensamblador), lenguaje de alto nivel" src="../images/02-nivel-abstraccion.jpg" /></td>
+<td><img alt="Tipos de lenguaje según su forma de ejecución: compilado, interpretado, intermedio" src="../images/03-forma-ejecucion.jpg" /></td>
+</tr>
+</tbody>
+</table>
+<h3 id="segun-nivel-de-abstraccion">Según nivel de abstracción<a class="headerlink" href="#segun-nivel-de-abstraccion" title="Permanent link">&para;</a></h3>
+<p><strong>Lenguaje de bajo nivel (1ª generación)</strong></p>
+<ul>
+<li>Código máquina (cadenas interminables de 1's y 0's) y ensamblador.</li>
+<li>El programador tiene control total del ordenador. Dependen de cada fabricante de hardware.</li>
+<li>Es difícil hacer programas con estos lenguajes a partir de cierto tamaño.</li>
+<li>A cambio, se obtiene el máximo rendimiento y velocidad.</li>
+</ul>
+<p><strong>Lenguajes de nivel medio (2ª generación)</strong></p>
+<ul>
+<li>Lenguajes donde ya disponemos de cierto nivel de abstracción, pero los programadores tienen que tener en cuenta ciertas particularidades, como el manejo, la reserva y la liberación de ciertos recursos hardware (memoria, ficheros, etc.).</li>
+</ul>
+<p><strong>Lenguajes de alto nivel (3ª generación)</strong></p>
+<ul>
+<li>La gran mayoría de los lenguajes de programación que se utilizan hoy en día pertenecen a este nivel de abstracción.</li>
+<li>En su mayoría, los lenguajes del paradigma imperativo y el de programación orientada a objetos.</li>
+<li>Permiten una forma de programar mucho más entendible e intuitiva.</li>
+<li>Buscan la aproximación al lenguaje humano, donde algunas instrucciones parecen ser una traducción directa de nuestro propio lenguaje.</li>
+</ul>
+<p><strong>Lenguajes 4GL (4ª generación)</strong></p>
+<ul>
+<li>Son lenguajes creados con un propósito específico, que permiten reducir la cantidad de líneas de código.</li>
+<li>Por ejemplo, SQL.</li>
+</ul>
+<p><strong>Lenguas naturales (5ª generación)</strong></p>
+<ul>
+<li>Pretenden abstraer más aún el lenguaje utilizando un lenguaje natural con una base de conocimientos que produce un sistema basado en el conocimiento.</li>
+<li>Principalmente basados en Inteligencia Artificial.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Nota:</strong> esta clasificación por "generaciones" varía según la fuente consultada. En muchos libros de texto, el ensamblador se considera 2ª generación y los lenguajes de alto nivel (C, Java, Python...) se consideran 3ª generación directamente, sin una "generación intermedia" explícita como la que aparece aquí. No es un error grave, pero conviene saber que no es la única forma de contar las generaciones que os vais a encontrar.</p>
+</blockquote>
+<h3 id="segun-forma-de-ejecucion">Según forma de ejecución<a class="headerlink" href="#segun-forma-de-ejecucion" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Compilado:</strong> convierte el código a binario que lee el sistema operativo (ej.: C, C++, Go).</li>
+<li><strong>Interpretado:</strong> requiere un programa que lea la instrucción del código en tiempo real y la ejecute (ej.: JavaScript, Python, Ruby).</li>
+<li><strong>Intermedio:</strong> se compila el código fuente a un lenguaje intermedio, y este último se ejecuta en una máquina virtual (ej.: Java, Kotlin, Scala).</li>
+</ul>
+<hr />
+<h2 id="lenguajes-compilados">Lenguajes compilados<a class="headerlink" href="#lenguajes-compilados" title="Permanent link">&para;</a></h2>
+<h3 id="proceso-general">Proceso general<a class="headerlink" href="#proceso-general" title="Permanent link">&para;</a></h3>
+<p><img alt="Diagrama del proceso de compilación: código fuente, edición, compilador, código objeto, enlace con bibliotecas, programa ejecutable" src="../images/06-proceso-compilacion-compilados.png" /></p>
+<ol>
+<li>Se escribe el <strong>código fuente</strong>.</li>
+<li>El <strong>compilador</strong> lo traduce y comprueba si hay errores de compilación.</li>
+<li>Si no hay errores, se genera el <strong>código objeto</strong>.</li>
+<li>El <strong>enlazador</strong> une el código objeto con las <strong>librerías</strong> (opcional) y genera el <strong>ejecutable</strong>.</li>
+<li>Si en la ejecución aparecen errores, se depura el código fuente y se repite el proceso.</li>
+</ol>
+<h3 id="codigo-fuente">Código fuente<a class="headerlink" href="#codigo-fuente" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Programa escrito en un lenguaje de alto nivel (texto ordinario que contiene las sentencias del programa en un lenguaje de programación).</li>
+<li>Necesita ser traducido a código máquina para poder ser ejecutado.</li>
+<li>Normalmente se escribe en un IDE (Entorno Integrado de Desarrollo, como por ejemplo PyCharm o NetBeans) y se almacena en ficheros de texto.</li>
+</ul>
+<h3 id="compilador">Compilador<a class="headerlink" href="#compilador" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Programa encargado de traducir los programas fuente escritos en un lenguaje de alto nivel a lenguaje máquina y de comprobar que las llamadas a las funciones de librería se realizan correctamente.</li>
+<li>Esta traducción se hace de forma completa: todo el código fuente se analiza y se comprueba antes de generar el código objeto. Si se detecta cualquier error, no se genera ningún código.</li>
+</ul>
+<h3 id="codigo-objeto">Código objeto<a class="headerlink" href="#codigo-objeto" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Es el programa fuente traducido (por el compilador) a código máquina.</li>
+<li>Aún no es directamente ejecutable, ya que no contiene todos los elementos externos al programa que este necesita para terminar de funcionar.</li>
+</ul>
+<h3 id="bibliotecas-librerias">Bibliotecas (librerías)<a class="headerlink" href="#bibliotecas-librerias" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Colección de programas ya hechos (ya sea por nosotros o por terceros), que ya están traducidos a código máquina, listos para utilizar en un programa y que facilitan la labor del programador.</li>
+<li>Un ejemplo de librerías son las funciones que se añaden al propio lenguaje para hacer tareas comunes a muchos programas (ej.: imprimir por pantalla, funciones matemáticas, uso de periféricos, acceso a Internet, etc.).</li>
+</ul>
+<h3 id="enlazador">Enlazador<a class="headerlink" href="#enlazador" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Es el programa encargado de insertar en nuestro código objeto el código máquina de las funciones de las librerías de las que hayamos hecho uso, y de hacer el montaje que producirá un programa ejecutable en código máquina.</li>
+<li>En los compiladores modernos, el proceso de compilación y enlazado se produce simultáneamente, por lo que no siempre es evidente esta separación.</li>
+</ul>
+<h3 id="ejecutable">Ejecutable<a class="headerlink" href="#ejecutable" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Traducción completa a código máquina, realizada por el enlazador, del programa fuente, y que ya es directamente ejecutable.</li>
+<li>Por ejemplo, cuando nos instalamos una nueva aplicación en el móvil, esto es lo que nos descargamos desde la tienda correspondiente.</li>
+</ul>
+<hr />
+<h2 id="lenguajes-interpretados">Lenguajes interpretados<a class="headerlink" href="#lenguajes-interpretados" title="Permanent link">&para;</a></h2>
+<h3 id="proceso-general_1">Proceso general<a class="headerlink" href="#proceso-general_1" title="Permanent link">&para;</a></h3>
+<p><img alt="Diagrama del proceso de un lenguaje interpretado: código fuente, intérprete instrucción a instrucción, errores de sintaxis, ejecución instrucción a instrucción" src="../images/08-lenguajes-interpretados.png" /></p>
+<ol>
+<li>Se escribe el <strong>código fuente</strong>.</li>
+<li>El <strong>intérprete</strong> lee la instrucción a instrucción (usando librerías opcionales) y comprueba si hay errores de sintaxis.</li>
+<li>Si no hay errores, se va ejecutando instrucción a instrucción.</li>
+<li>Si en la ejecución aparecen errores, se depura el código fuente y se repite el proceso.</li>
+</ol>
+<h3 id="como-funciona-el-interprete">Cómo funciona el intérprete<a class="headerlink" href="#como-funciona-el-interprete" title="Permanent link">&para;</a></h3>
+<p>El intérprete hace las funciones de compilador, pero en vez de revisar todo el código primero antes de generar el código objeto, lo hace de la siguiente forma:</p>
+<ol>
+<li>Comprueba la primera instrucción del código fuente.</li>
+<li>Si la instrucción tiene errores de sintaxis, para la ejecución y da un error.</li>
+<li>Si la instrucción no tiene errores de sintaxis, la ejecuta y pasa a la siguiente instrucción del código fuente.</li>
+<li>Vuelve al paso 1 hasta que se ejecuten todas las instrucciones del código fuente.</li>
+</ol>
+<h3 id="ventajas">Ventajas<a class="headerlink" href="#ventajas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Portabilidad.</strong> El programa es portable de forma sencilla. Si el intérprete está instalado, el programa va a funcionar. Además, el código fuente suele ocupar mucho menos espacio que el código ejecutable, por lo que es fácil pasarlo de un equipo a otro.</li>
+<li><strong>Multiplataforma.</strong> Cada sistema tiene un código máquina distinto. Si necesito que mi programa funcione en máquinas totalmente distintas, necesito compilarlo para cada una de ellas. Con un lenguaje interpretado, con enviar el fuente es suficiente, siempre que exista un intérprete para dicha máquina (y que esté instalado).</li>
+</ul>
+<h3 id="inconvenientes">Inconvenientes<a class="headerlink" href="#inconvenientes" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Rendimiento.</strong> El programa se ejecuta un poco más lento que un programa compilado, porque cada instrucción debe interpretarse primero y ejecutarse después. Con la potencia del hardware que existe hoy día, esto no es un problema importante, excepto para un pequeño porcentaje de aplicaciones en las que la velocidad de ejecución es crítica.</li>
+<li><strong>Propiedad intelectual del código fuente.</strong> Cuando se distribuye una aplicación, se distribuye el ejecutable, que es el resultado de la compilación, no el código fuente. Con un lenguaje interpretado, lo que se necesita es precisamente el código fuente, por lo que no se puede mantener oculto.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Nota:</strong> en la diapositiva original se dice que el intérprete "va traduciendo [el código] a código intermedio y lo ejecuta". Esto puede confundir, porque más adelante se distingue el modelo "intermedio" (Java, Kotlin...) del "interpretado" (Python, JavaScript...) como dos categorías distintas. En realidad, algunos intérpretes (como el de Python) sí generan un código intermedio (bytecode) internamente antes de ejecutarlo, pero esto no es la definición general de "lenguaje interpretado" y conviene no mezclar ambos conceptos al estudiar.</p>
+</blockquote>
+<h2 id="compilador-vs-interprete">Compilador vs. intérprete<a class="headerlink" href="#compilador-vs-interprete" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Compilador</th>
+<th>Intérprete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lee totalmente el código fuente y lo traduce a lenguaje objeto, y lo ejecuta</td>
+<td>Lee línea a línea el código fuente y lo va traduciendo y ejecutando</td>
+</tr>
+<tr>
+<td>Genera un ejecutable a partir del código objeto</td>
+<td>No genera ejecutable</td>
+</tr>
+<tr>
+<td>El proceso de traducción se realiza solo una vez</td>
+<td>Cada ejecución vuelve a interpretar el código</td>
+</tr>
+<tr>
+<td>Depende de la plataforma</td>
+<td>Multiplataforma</td>
+</tr>
+<tr>
+<td>Mejor rendimiento (código máquina)</td>
+<td>Peor rendimiento (sin optimizar)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="paradigmas-de-programacion">Paradigmas de programación<a class="headerlink" href="#paradigmas-de-programacion" title="Permanent link">&para;</a></h2>
+<p>Los lenguajes de programación también se pueden clasificar según su <strong>paradigma</strong>, es decir, la forma en la que se plantea la resolución de un problema:</p>
+<p><img alt="Árbol de paradigmas de programación: imperativa (estructurados, procedimental, OOP, otros) y declarativa (funcional, lógico, otros)" src="../images/09-paradigmas.jpg" /></p>
+<ul>
+<li><strong>Imperativa</strong><ul>
+<li>Estructurados (ej.: Basic)</li>
+<li>Procedimental (ej.: Go, C)</li>
+<li>Orientada a objetos (ej.: Java, C++, PHP)</li>
+<li>Otros</li>
+</ul>
+</li>
+<li><strong>Declarativa</strong><ul>
+<li>Funcional (ej.: Scala)</li>
+<li>Lógico (ej.: Prolog)</li>
+<li>Otros</li>
+</ul>
+</li>
+</ul>
+<h3 id="imperativo">Imperativo<a class="headerlink" href="#imperativo" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Son lenguajes en los que el programador, para resolver un problema, ha de diseñar un algoritmo y concretarlo en un programa que le diga a la máquina, paso a paso, lo que debe hacer para resolver dicho problema.</li>
+<li>Se fundamentan en la asignación de variables para almacenar valores y en la realización de operaciones con los datos almacenados.</li>
+</ul>
+<h3 id="declarativo">Declarativo<a class="headerlink" href="#declarativo" title="Permanent link">&para;</a></h3>
+<ul>
+<li>En estos lenguajes, el programador solo tiene que declarar o especificar el problema ("qué hay que resolver"), siendo el propio traductor del lenguaje el que se encarga de construir el algoritmo que dará solución al problema ("cómo" resolverlo).</li>
+<li>Por ejemplo, en una consulta a una base de datos.</li>
+</ul>
+<h3 id="procedimental">Procedimental<a class="headerlink" href="#procedimental" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Con ellos el programa se divide en partes más pequeñas, llamadas funciones y procedimientos, que pueden comunicarse entre sí.</li>
+<li>Permite reutilizar código ya programado y solventa el problema de la "programación espagueti".</li>
+</ul>
+<h3 id="orientado-a-objetos">Orientado a objetos<a class="headerlink" href="#orientado-a-objetos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Crean una estructura de clases y objetos que emula un modelo del mundo real, donde los objetos realizan acciones e interactúan con otros objetos.</li>
+<li>Los objetos son entidades que tienen un determinado comportamiento (métodos) y una serie de atributos.</li>
+<li>Por ejemplo, un objeto <code>Lavadora</code> puede tener los métodos <code>Prelavar</code>, <code>Lavar</code>, <code>Enjuagar</code> y <code>Centrifugar</code>.</li>
+</ul>
+<hr />
+<h2 id="tipado">Tipado<a class="headerlink" href="#tipado" title="Permanent link">&para;</a></h2>
+<p>Los lenguajes utilizan variables y constantes para almacenar los datos que varían a lo largo de la ejecución de un programa.</p>
+<p>En función del tratamiento de estas variables, constantes y sus tipos, tenemos dos clasificaciones de lenguajes:</p>
+<ul>
+<li><strong>Fuertemente tipados:</strong> en el momento de escribir el programa, cada variable tendrá asignado un tipo (ej.: Java, C).</li>
+<li><strong>Débilmente tipados:</strong> el programador no tiene que definir el tipo de las variables, y las conversiones entre estos suelen hacerse de forma automática por el compilador o intérprete (ej.: Python, JavaScript).</li>
+</ul>
+<h2 id="evolucion-de-los-lenguajes-de-programacion">Evolución de los lenguajes de programación<a class="headerlink" href="#evolucion-de-los-lenguajes-de-programacion" title="Permanent link">&para;</a></h2>
+<p><img alt="Diagrama de evolución de los lenguajes de programación desde 1956 hasta la actualidad" src="../images/10-evolucion-lenguajes.jpg" /></p>
+<p><em>Fuente: <a href="http://rigaux.org/language-study/diagram-light.png">rigaux.org/language-study</a></em></p>
+<p>Desde Fortran I (1956) y Lisp (1958) hasta lenguajes actuales como Rust, Go, Kotlin o Swift, los lenguajes de programación han ido evolucionando y derivando unos de otros a lo largo de las décadas, incorporando cada vez más abstracción y facilidades para el programador.</p>
+<h2 id="que-lenguaje-elegir">¿Qué lenguaje elegir?<a class="headerlink" href="#que-lenguaje-elegir" title="Permanent link">&para;</a></h2>
+<p>A la hora de elegir un lenguaje de programación para un proyecto, hay que tener en cuenta:</p>
+<ul>
+<li>Campo de aplicación</li>
+<li>Experiencia previa</li>
+<li>Herramientas de desarrollo</li>
+<li>Documentación disponible</li>
+<li>Base de usuarios</li>
+<li>Reusabilidad</li>
+<li>Portabilidad</li>
+<li>Imposición del cliente</li>
+</ul>
+<hr />
+<h2 id="codigo-fuente-objeto-y-ejecutable-resumen">Código fuente, objeto y ejecutable (resumen)<a class="headerlink" href="#codigo-fuente-objeto-y-ejecutable-resumen" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Código fuente:</strong> archivo de texto legible escrito en un lenguaje de programación. Se crea mediante un editor de texto o entorno de desarrollo.</li>
+<li><strong>Código objeto (intermedio):</strong> archivo binario no ejecutable, obtenido tras compilar el código fuente.</li>
+<li><strong>Código ejecutable:</strong> archivo binario ejecutable, obtenido tras enlazar el código objeto con el sistema operativo o la máquina virtual.</li>
+</ul>
+<p><img alt="Fases de generación del código: código fuente, edición, código objeto, traducción, código ejecutable, enlace con bibliotecas" src="../images/04-codigo-fases.png" /></p>
+<h2 id="proceso-de-compilacion">Proceso de compilación<a class="headerlink" href="#proceso-de-compilacion" title="Permanent link">&para;</a></h2>
+<p><img alt="El programador escribe código fuente en ensamblador, que un programa ensamblador traduce a código máquina para que lo ejecute el ordenador" src="../images/05-proceso-compilacion-ensamblador.jpg" /></p>
+<p>El proceso de compilación se sitúa dentro de la fase de <strong>codificación</strong> del desarrollo de software (análisis → diseño → <strong>codificación</strong> → pruebas → mantenimiento), y consta de las siguientes fases:</p>
+<ol>
+<li><strong>Código fuente</strong> → Análisis léxico</li>
+<li>Análisis léxico → Análisis sintáctico-semántico</li>
+<li>Análisis sintáctico-semántico → Generador de código intermedio</li>
+<li><strong>Código intermedio</strong> → Optimizador de código</li>
+<li>Optimizador de código → Código optimizado</li>
+<li>Código optimizado → Generador de código</li>
+<li><strong>Código objeto</strong> (+ librerías) → Enlazador</li>
+<li>Enlazador → <strong>Código ejecutable</strong></li>
+</ol>
+<p><img alt="Diagrama detallado del proceso de compilación: código fuente, análisis léxicográfico, análisis sintáctico-semántico, generador de código intermedio, código intermedio, optimizador de código, código optimizado, generador de código, código objeto, librerías, enlazador, código ejecutable" src="../images/07-proceso-compilacion-detallado.jpg" /></p>
+<h3 id="analisis-lexico">Análisis léxico<a class="headerlink" href="#analisis-lexico" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Se lee secuencialmente todo el código fuente, agrupándolo en <em>tokens</em>: secuencias de caracteres que tienen significado (<code>int</code>, <code>=</code>, <code>void</code>, ...).</li>
+<li>Los espacios en blanco, líneas en blanco, comentarios, etc., se eliminan del programa fuente.</li>
+</ul>
+<h3 id="analisis-sintactico">Análisis sintáctico<a class="headerlink" href="#analisis-sintactico" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Recibe el código fuente en forma de <em>tokens</em> y los agrupa jerárquicamente en frases gramaticales que el compilador utiliza para sintetizar la salida.</li>
+<li>Se comprueba si el código es sintácticamente correcto (obedece a la gramática del lenguaje).</li>
+</ul>
+<h3 id="analisis-semantico">Análisis semántico<a class="headerlink" href="#analisis-semantico" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Comprueba que las declaraciones son correctas, se verifican los tipos de todas las expresiones, si las operaciones se pueden realizar sobre esos tipos, si los arrays tienen el tamaño adecuado, etc.</li>
+</ul>
+<h3 id="generacion-del-codigo-intermedio">Generación del código intermedio<a class="headerlink" href="#generacion-del-codigo-intermedio" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Representación intermedia similar al código máquina, con el fin de facilitar la tarea de traducir al código objeto.</li>
+</ul>
+<hr />
+<h2 id="maquina-virtual">Máquina virtual<a class="headerlink" href="#maquina-virtual" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Software que separa el funcionamiento del ordenador del hardware instalado.</li>
+<li>Permite desarrollar y ejecutar una aplicación sobre cualquier equipo o sistema operativo.</li>
+<li>Actúa de puente entre la aplicación y el hardware donde se instala.</li>
+<li>Garantiza la <strong>portabilidad</strong>: la capacidad de una aplicación de ejecutarse en cualquier arquitectura física.</li>
+</ul>
+<h2 id="jvm-java-virtual-machine">JVM (Java Virtual Machine)<a class="headerlink" href="#jvm-java-virtual-machine" title="Permanent link">&para;</a></h2>
+<p><img alt="Diagrama de funcionamiento de la JVM: A.java se compila a A.class, que junto con B.class (obtenido por red) se carga en la Java Virtual Machine mediante Loader, Verifier, Linker y Bytecode Interpreter" src="../images/11-jvm.jpg" /></p>
+<ul>
+<li>Carga, verifica, enlaza e inicializa el <em>bytecode</em> a partir de ficheros <code>.class</code> obtenidos tras la compilación.</li>
+<li>La fase de enlazado se realiza cada vez que se ejecuta el programa.</li>
+<li>Se traduce el <em>bytecode</em> mediante el intérprete (línea a línea) y el compilador <strong>JIT</strong> de Java (<em>Just In Time</em>), que compila el fichero <code>.class</code> completo a código nativo y lo ejecuta.</li>
+<li>Es más lento que otros lenguajes compilados directamente a código máquina.</li>
+</ul>
+<hr />
+<h2 id="entorno-de-desarrollo-integrado-ide">Entorno de desarrollo integrado (IDE)<a class="headerlink" href="#entorno-de-desarrollo-integrado-ide" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Software enfocado al desarrollo de software, integrando un conjunto de herramientas.</li>
+<li>Conjunto configurable dependiendo de la aplicación a desarrollar.</li>
+<li><strong>Componentes:</strong><ul>
+<li>Editor de texto</li>
+<li>Compilador/intérprete</li>
+<li>Depurador</li>
+<li>Asistente para interfaces gráficos (GUI)</li>
+<li>Control de versiones</li>
+</ul>
+</li>
+</ul>
+<p>Más información: <a href="https://pypl.github.io/IDE.html">pypl.github.io/IDE.html</a></p>
+<h3 id="entornos-ligeros">Entornos ligeros<a class="headerlink" href="#entornos-ligeros" title="Permanent link">&para;</a></h3>
+<p>Editores de texto enfocados al desarrollo:</p>
+<ul>
+<li>Coloreado de sintaxis</li>
+<li>Completado automático</li>
+<li>Navegación por el código</li>
+<li>Integración con control de versiones</li>
+</ul>
+<p><strong>Ejemplos:</strong> Visual Studio Code, Atom, Sublime.</p>
+<p><img alt="Captura de pantalla de Visual Studio Code editando un fichero Java" src="../images/12-entornos-ligeros-vscode.jpg" /></p>
+<h3 id="entornos-pesados">Entornos pesados<a class="headerlink" href="#entornos-pesados" title="Permanent link">&para;</a></h3>
+<p>Permiten, además:</p>
+<ul>
+<li>Editar y depurar el código</li>
+<li>Generación de código</li>
+<li>Interactuar con el servidor / base de datos</li>
+<li><em>Debug</em>, <em>profile</em>, <em>modelling</em></li>
+</ul>
+<p><strong>Ejemplos:</strong> Eclipse, NetBeans, IntelliJ IDEA, WebStorm.</p>
+<p><img alt="Captura de pantalla del IDE Eclipse" src="../images/13-entornos-pesados-eclipse.jpg" /></p>
+<hr />
+<h2 id="estructura-basica-de-un-programa-informatico">Estructura básica de un programa informático<a class="headerlink" href="#estructura-basica-de-un-programa-informatico" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Cabecera:</strong> nombre del programa, datos de entrada, versión...</li>
+<li><strong>Declaraciones</strong><ul>
+<li><strong>Bibliotecas:</strong> importación de funciones o parámetros ya codificados.</li>
+<li><strong>Variables y constantes</strong></li>
+</ul>
+</li>
+<li><strong>Funciones:</strong> creadas por el programador para ser usadas en varias ocasiones.</li>
+<li><strong>Asignaciones:</strong> valores iniciales de las variables.</li>
+<li><strong>Entradas:</strong> petición de datos al usuario o sistema.</li>
+<li><strong>Control:</strong> se sigue el flujo del programa establecido.</li>
+<li><strong>Salidas:</strong> obtención de los resultados.</li>
+</ul>
+<h3 id="ejemplo-en-python">Ejemplo en Python<a class="headerlink" href="#ejemplo-en-python" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cabecera</span>
+<span class="c1"># Programa simple en Python: Hello World con entrada de nombre</span>
+<span class="c1"># Autor: Nombre del autor</span>
+<span class="c1"># Fecha: 13/09/2024</span>
+
+<span class="c1"># añadimos bibliotecas</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">stat</span><span class="w"> </span><span class="kn">import</span> <span class="n">Fore</span>
+
+<span class="c1"># Declaración de una función simple para saludar</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">saludar</span><span class="p">(</span><span class="n">nombre</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"¡Hola, </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s2">!"</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Declaración de variables</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="s2">""</span>  <span class="c1"># Variable para almacenar el nombre del usuario</span>
+
+    <span class="c1"># Entrada: Solicitar el nombre del usuario</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Introduce tu nombre: "</span><span class="p">)</span>  <span class="c1"># Leer el nombre introducido por el usuario</span>
+
+    <span class="c1"># Uso de la función</span>
+    <span class="n">saludar</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+
+    <span class="c1"># Entradas</span>
+    <span class="n">opcion</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Elige 1 para Hello World o 2 para Salir: "</span><span class="p">))</span>  <span class="c1"># Leer la opción elegida</span>
+
+    <span class="c1"># Control y salidas</span>
+    <span class="k">if</span> <span class="n">opcion</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello, World!"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Saliendo del programa. ¡Adiós!"</span><span class="p">)</span>
+
+<span class="c1"># Ejecutar el bloque principal</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="ejemplo-en-java">Ejemplo en Java<a class="headerlink" href="#ejemplo-en-java" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Cabecera</span>
+<span class="c1">//Programa simple en Java: Hello World con entrada de nombre</span>
+<span class="c1">// Autor: Nombre del autor</span>
+<span class="c1">// Fecha: 13/09/2024</span>
+
+<span class="c1">// Biblioteca para la entrada de datos</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloWorld</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// Declaración de una función simple para saludar</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">saludar</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"¡Hola, "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"!"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="c1">// Declaración de variables</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">opcion</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Entrada: Solicitar el nombre del usuario</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Introduce tu nombre: "</span><span class="p">);</span>
+<span class="w">        </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"> </span><span class="c1">// Leer el nombre introducido por el usuario</span>
+
+<span class="w">        </span><span class="c1">// Uso de la función</span>
+<span class="w">        </span><span class="n">saludar</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Entradas</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Elige 1 para Hello World o 2 para Salir: "</span><span class="p">);</span>
+<span class="w">        </span><span class="n">opcion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Control y salidas</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">opcion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hello, World!"</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Saliendo del programa. ¡Adiós!"</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>⚠️ <strong>Nota:</strong> en el ejemplo de Python, la línea <code>from stat import Fore</code> no tiene sentido en este programa (<code>stat</code> es un módulo de la librería estándar para consultar metadatos de ficheros, y <code>Fore</code> no existe en él; <code>Fore</code> sí existe en la librería <code>colorama</code>, usada para dar color al texto en consola). Además, esa importación no se llega a usar en ningún punto del código. Es probablemente un resto de un ejemplo anterior y conviene quitarla o corregirla para no confundir al alumnado, ya que tal como está el código dará un error de importación al ejecutarse.</p>
+</blockquote>
+<hr />
+<h2 id="alguna-pregunta">¿Alguna pregunta?<a class="headerlink" href="#alguna-pregunta" title="Permanent link">&para;</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
