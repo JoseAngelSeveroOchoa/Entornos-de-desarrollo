@@ -96,7 +96,6 @@ Los lenguajes de programación se pueden clasificar según dos criterios:
 - Pretenden abstraer más aún el lenguaje utilizando un lenguaje natural con una base de conocimientos que produce un sistema basado en el conocimiento.
 - Principalmente basados en Inteligencia Artificial.
 
-> ⚠️ **Nota:** esta clasificación por "generaciones" varía según la fuente consultada. En muchos libros de texto, el ensamblador se considera 2ª generación y los lenguajes de alto nivel (C, Java, Python...) se consideran 3ª generación directamente, sin una "generación intermedia" explícita como la que aparece aquí. No es un error grave, pero conviene saber que no es la única forma de contar las generaciones que os vais a encontrar.
 
 ### Según forma de ejecución
 
@@ -181,7 +180,6 @@ El intérprete hace las funciones de compilador, pero en vez de revisar todo el 
 - **Rendimiento.** El programa se ejecuta un poco más lento que un programa compilado, porque cada instrucción debe interpretarse primero y ejecutarse después. Con la potencia del hardware que existe hoy día, esto no es un problema importante, excepto para un pequeño porcentaje de aplicaciones en las que la velocidad de ejecución es crítica.
 - **Propiedad intelectual del código fuente.** Cuando se distribuye una aplicación, se distribuye el ejecutable, que es el resultado de la compilación, no el código fuente. Con un lenguaje interpretado, lo que se necesita es precisamente el código fuente, por lo que no se puede mantener oculto.
 
-> ⚠️ **Nota:** en la diapositiva original se dice que el intérprete "va traduciendo [el código] a código intermedio y lo ejecuta". Esto puede confundir, porque más adelante se distingue el modelo "intermedio" (Java, Kotlin...) del "interpretado" (Python, JavaScript...) como dos categorías distintas. En realidad, algunos intérpretes (como el de Python) sí generan un código intermedio (bytecode) internamente antes de ejecutarlo, pero esto no es la definición general de "lenguaje interpretado" y conviene no mezclar ambos conceptos al estudiar.
 
 ## Compilador vs. intérprete
 
