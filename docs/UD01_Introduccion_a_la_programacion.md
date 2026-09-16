@@ -239,18 +239,18 @@ Los lenguajes utilizan variables y constantes para almacenar datos a lo largo de
 ### 1. Según cuándo se comprueba el tipo (Estático vs. Dinámico)
 
 - **Tipado estático:** El tipo de una variable se define o infiere durante la fase de compilación (antes de ejecutar el programa). Una variable no puede cambiar de tipo.
-  - *Ejemplos:* Java, C, C++, Rust.
+    - *Ejemplos:* Java, C, C++, Rust.
 - **Tipado dinámico:** El tipo no se asocia a la variable, sino al valor que contiene en cada momento. Se evalúa en tiempo de ejecución y una misma variable puede reasignarse con datos de distinto tipo.
-  - *Ejemplos:* Python, JavaScript, PHP.
+    - *Ejemplos:* Python, JavaScript, PHP.
 
 ### 2. Según la tolerancia a las conversiones implícitas (Fuerte vs. Débil)
 
 - **Tipado fuerte:** El lenguaje no permite realizar operaciones entre tipos incompatibles sin una conversión explícita. Evita la conversión implícita no intencionada.
-  - *Ejemplos:* Python, Java. 
-  - *En Python:* `"Texto" + 5` produce un error (`TypeError`).
+    - *Ejemplos:* Python, Java. 
+    - *En Python:* `"Texto" + 5` produce un error (`TypeError`).
 - **Tipado débil:** El lenguaje realiza conversiones implícitas de tipo (coerción) de forma automática al combinar distintos tipos en una operación.
-  - *Ejemplos:* JavaScript, C.
-  - *En JavaScript:* `"Texto" + 5` convierte el `5` a cadena y da `"Texto5"`.
+    - *Ejemplos:* JavaScript, C.
+    - *En JavaScript:* `"Texto" + 5` convierte el `5` a cadena y da `"Texto5"`.
 
 ## Evolución de los lenguajes de programación
 
