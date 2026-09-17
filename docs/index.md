@@ -5,14 +5,10 @@
 ## 1. Información General del Módulo
 
 * **Curso:** 1º DAM (Desarrollo de Aplicaciones Multiplataforma) - Curso 2026-2027
-* **Profesor:** [Nombre del profesor] ([correo@edu.gva.es](mailto:correo@edu.gva.es))
-* **Carga horaria:** 96 horas en total (aprox. 3 horas/semana)
+* **Profesor:** José Ángel Segarra Castillo ([ja.segarracastillo@edu.gva.es](mailto:ja.segarracastillo@edu.gva.es))
+* **Carga horaria:** 96 horas en total ( 3 horas/semana)
 * **Centro:** IES Severo Ochoa
 
-### Horario Semanal
-* **[Día]:** [hora inicio] - [hora fin] h
-* **[Día]:** [hora inicio] - [hora fin] h
-* **[Día]:** [hora inicio] - [hora fin] h
 
 > Este módulo profesional tiene el código **0487** dentro del título de Técnico Superior en Desarrollo de Aplicaciones Multiplataforma, y se cursa en 1º curso.
 
