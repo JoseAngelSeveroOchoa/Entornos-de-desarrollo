@@ -61,6 +61,15 @@ flowchart LR
 * **Área de preparación (*stage*):** una "cesta" donde vas metiendo los cambios que quieres guardar en la próxima versión.
 * **Repositorio:** el historial real, con todas las versiones (commits) ya confirmadas.
 
+En detalle, un archivo puede estar en cuatro estados distintos, y estos son los comandos que lo mueven de uno a otro:
+
+![Estados de un archivo en Git: untracked, modified, staged y committed](images/ud01-zonas-git.svg)
+
+* 🆕 **Untracked:** archivo nuevo que Git todavía no vigila.
+* ✏️ **Modified:** archivo que Git ya conoce, pero que has cambiado desde el último commit.
+* ✅ **Staged:** ya está en la cesta (`git add`), listo para el próximo commit.
+* 💿 **Committed:** ya forma parte del historial (`git commit`).
+
 !!! note "Truco para entenderlo"
     Piensa en el `commit` como hacer una **foto** del contenido de la cesta (área de preparación) en ese instante. Lo que no metiste en la cesta, no sale en la foto.
 
