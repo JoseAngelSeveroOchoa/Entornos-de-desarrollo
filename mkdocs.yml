@@ -10,7 +10,8 @@ theme:
 nav:
   - Inicio: index.md
   - Unidades:
-    - UD01_Introduccion_a_la_programacion: UD01_Introduccion_a_la_programacion.md
+    - UD01_Control_de_versiones_Git_GitHub: UD01_Control_de_versiones_Git_GitHub.md
+    - UD02_Introduccion_a_la_programacion: UD02_Introduccion_a_la_programacion.md
  
  
 
