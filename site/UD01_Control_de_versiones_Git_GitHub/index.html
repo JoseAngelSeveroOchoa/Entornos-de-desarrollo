@@ -1,0 +1,1298 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://JoseAngelSeveroOchoa.github.io/Entornos-de-desarrollo/UD01_Control_de_versiones_Git_GitHub/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../UD02_Introduccion_a_la_programacion/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>UD01_Control_de_versiones_Git_GitHub - ENTORNOS DE DESARROLLO</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ud1-control-de-versiones-git-y-github" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="ENTORNOS DE DESARROLLO" class="md-header__button md-logo" aria-label="ENTORNOS DE DESARROLLO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ENTORNOS DE DESARROLLO
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD01_Control_de_versiones_Git_GitHub
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ENTORNOS DE DESARROLLO" class="md-nav__button md-logo" aria-label="ENTORNOS DE DESARROLLO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ENTORNOS DE DESARROLLO
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidades
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidades
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD01_Control_de_versiones_Git_GitHub
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD01_Control_de_versiones_Git_GitHub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-un-vistazo-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Un vistazo rápido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-instalacion-y-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Instalación y configuración
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Instalación y configuración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalar-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalar Git
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-tu-identidad-una-sola-vez-por-ordenador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurar tu identidad (una sola vez por ordenador)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcional-elegir-editor-de-texto-para-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (Opcional) Elegir editor de texto para Git
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-el-ciclo-de-vida-de-un-archivo-en-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. El ciclo de vida de un archivo en Git
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-comandos-basicos-en-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Comandos básicos en local
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Comandos básicos en local">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear un repositorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ver-en-que-estado-estan-tus-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver en qué estado están tus archivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ver-que-ha-cambiado-exactamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver qué ha cambiado exactamente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-cambios-a-la-cesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Añadir cambios a la cesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirmar-cambios-crear-una-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confirmar cambios (crear una versión)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ver-el-historial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver el historial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deshacer-cosas-con-cuidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deshacer cosas (con cuidado)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignorar-archivos-gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ignorar archivos: .gitignore
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-pasar-a-lo-remoto-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Pasar a lo remoto: GitHub
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-ramas-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Ramas (branches)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-trabajo-colaborativo-en-github-fork-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Trabajo colaborativo en GitHub: Fork + Pull Request
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Buenas prácticas 💡
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-chuleta-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Chuleta resumen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-para-saber-mas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Para saber más
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD02_Introduccion_a_la_programacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD02_Introduccion_a_la_programacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-un-vistazo-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Un vistazo rápido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-instalacion-y-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Instalación y configuración
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Instalación y configuración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalar-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalar Git
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-tu-identidad-una-sola-vez-por-ordenador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurar tu identidad (una sola vez por ordenador)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcional-elegir-editor-de-texto-para-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (Opcional) Elegir editor de texto para Git
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-el-ciclo-de-vida-de-un-archivo-en-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. El ciclo de vida de un archivo en Git
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-comandos-basicos-en-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Comandos básicos en local
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Comandos básicos en local">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear un repositorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ver-en-que-estado-estan-tus-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver en qué estado están tus archivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ver-que-ha-cambiado-exactamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver qué ha cambiado exactamente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-cambios-a-la-cesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Añadir cambios a la cesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirmar-cambios-crear-una-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confirmar cambios (crear una versión)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ver-el-historial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver el historial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deshacer-cosas-con-cuidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deshacer cosas (con cuidado)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignorar-archivos-gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ignorar archivos: .gitignore
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-pasar-a-lo-remoto-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Pasar a lo remoto: GitHub
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-ramas-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Ramas (branches)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-trabajo-colaborativo-en-github-fork-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Trabajo colaborativo en GitHub: Fork + Pull Request
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Buenas prácticas 💡
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-chuleta-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Chuleta resumen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-para-saber-mas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Para saber más
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ud1-control-de-versiones-git-y-github">UD1. Control de versiones: Git y GitHub<a class="headerlink" href="#ud1-control-de-versiones-git-y-github" title="Permanent link">&para;</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">¿Por qué lo primero?</p>
+<p>Vais a usar Git y GitHub <strong>desde hoy hasta el último día de curso</strong>, en todas las prácticas. Cuanto antes se os haga costumbre, menos código perderéis por accidente 🙂</p>
+</div>
+<hr />
+<h2 id="1-un-vistazo-rapido">1. Un vistazo rápido<a class="headerlink" href="#1-un-vistazo-rapido" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>¿Qué es?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🗂️ <strong>Git</strong></td>
+<td>Un programa que instalas en tu ordenador. Guarda el <strong>historial de versiones</strong> de tus archivos. Funciona sin conexión a internet.</td>
+</tr>
+<tr>
+<td>🌐 <strong>GitHub</strong></td>
+<td>Una web que aloja repositorios Git <strong>en la nube</strong>. Permite compartir código, colaborar y hacer copia de seguridad remota.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Git es la herramienta. GitHub es uno de los sitios donde puedes guardar tus repositorios de Git (hay otros: GitLab, Bitbucket...).</p>
+</blockquote>
+<hr />
+<h2 id="2-instalacion-y-configuracion">2. Instalación y configuración<a class="headerlink" href="#2-instalacion-y-configuracion" title="Permanent link">&para;</a></h2>
+<h3 id="instalar-git">Instalar Git<a class="headerlink" href="#instalar-git" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Descarga: <a href="https://git-scm.com/download">git-scm.com/download</a></li>
+<li>Comprueba que se ha instalado bien:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>--version
+</code></pre></div>
+<h3 id="configurar-tu-identidad-una-sola-vez-por-ordenador">Configurar tu identidad (una sola vez por ordenador)<a class="headerlink" href="#configurar-tu-identidad-una-sola-vez-por-ordenador" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"Nombre Apellidos"</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">"tu_correo@edu.gva.es"</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">No lo olvides</p>
+<p>Cada <code>commit</code> que hagas queda firmado con este nombre y correo. Si no configuras esto, luego no podrás verificar la autoría de tus prácticas.</p>
+</div>
+<h3 id="opcional-elegir-editor-de-texto-para-git">(Opcional) Elegir editor de texto para Git<a class="headerlink" href="#opcional-elegir-editor-de-texto-para-git" title="Permanent link">&para;</a></h3>
+<p>Si no indicas nada, Git usará <code>vim</code>, que es incómodo si no lo conoces. Mejor usa VS Code:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>core.editor<span class="w"> </span><span class="s2">"code --wait"</span>
+</code></pre></div>
+<hr />
+<h2 id="3-el-ciclo-de-vida-de-un-archivo-en-git">3. El ciclo de vida de un archivo en Git<a class="headerlink" href="#3-el-ciclo-de-vida-de-un-archivo-en-git" title="Permanent link">&para;</a></h2>
+<p>Esta es <strong>la idea más importante</strong> de toda la unidad. Un archivo pasa por tres "sitios" antes de quedar guardado de verdad:</p>
+<div class="highlight"><pre><span></span><code>flowchart LR
+    A["📁 Directorio de trabajo&lt;br/&gt;(tus archivos tal cual los ves)"] --&gt;|"git add"| B["📦 Área de preparación&lt;br/&gt;(stage)"]
+    B --&gt;|"git commit"| C["💾 Repositorio local&lt;br/&gt;(historial guardado)"]
+</code></pre></div>
+<ul>
+<li><strong>Directorio de trabajo:</strong> donde editas tus archivos normalmente.</li>
+<li><strong>Área de preparación (<em>stage</em>):</strong> una "cesta" donde vas metiendo los cambios que quieres guardar en la próxima versión.</li>
+<li><strong>Repositorio:</strong> el historial real, con todas las versiones (commits) ya confirmadas.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Truco para entenderlo</p>
+<p>Piensa en el <code>commit</code> como hacer una <strong>foto</strong> del contenido de la cesta (área de preparación) en ese instante. Lo que no metiste en la cesta, no sale en la foto.</p>
+</div>
+<hr />
+<h2 id="4-comandos-basicos-en-local">4. Comandos básicos en local<a class="headerlink" href="#4-comandos-basicos-en-local" title="Permanent link">&para;</a></h2>
+<h3 id="crear-un-repositorio">Crear un repositorio<a class="headerlink" href="#crear-un-repositorio" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>init
+</code></pre></div>
+Lo ejecutas <strong>una vez</strong>, dentro de la carpeta de tu proyecto.</p>
+<h3 id="ver-en-que-estado-estan-tus-archivos">Ver en qué estado están tus archivos<a class="headerlink" href="#ver-en-que-estado-estan-tus-archivos" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>status
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 Rojo</td>
+<td>Archivo modificado o nuevo, <strong>todavía no está en la cesta</strong></td>
+</tr>
+<tr>
+<td>🟢 Verde</td>
+<td>Archivo ya añadido al área de preparación, <strong>listo para el próximo commit</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="ver-que-ha-cambiado-exactamente">Ver qué ha cambiado exactamente<a class="headerlink" href="#ver-que-ha-cambiado-exactamente" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>diff<span class="w">              </span><span class="c1"># cambios sin preparar</span>
+git<span class="w"> </span>diff<span class="w"> </span>--staged<span class="w">     </span><span class="c1"># cambios ya en la cesta</span>
+</code></pre></div>
+<h3 id="anadir-cambios-a-la-cesta">Añadir cambios a la cesta<a class="headerlink" href="#anadir-cambios-a-la-cesta" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>archivo.txt<span class="w">   </span><span class="c1"># un archivo concreto</span>
+git<span class="w"> </span>add<span class="w"> </span>.<span class="w">             </span><span class="c1"># todos los archivos nuevos o modificados</span>
+</code></pre></div>
+<h3 id="confirmar-cambios-crear-una-version">Confirmar cambios (crear una versión)<a class="headerlink" href="#confirmar-cambios-crear-una-version" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Mensaje claro de lo que has hecho"</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Buenos mensajes de commit</p>
+<p>❌ <code>"cambios"</code>, <code>"cosas"</code>, <code>"asdf"</code>
+✅ <code>"Añade validación del formulario de login"</code></p>
+</div>
+<h3 id="ver-el-historial">Ver el historial<a class="headerlink" href="#ver-el-historial" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>log<span class="w">            </span><span class="c1"># historial completo</span>
+git<span class="w"> </span>log<span class="w"> </span>--graph<span class="w">    </span><span class="c1"># historial en forma de árbol</span>
+</code></pre></div>
+Se navega con las flechas ↑ ↓ y se sale pulsando <code>q</code>.</p>
+<h3 id="deshacer-cosas-con-cuidado">Deshacer cosas (con cuidado)<a class="headerlink" href="#deshacer-cosas-con-cuidado" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Qué hace</th>
+<th>¿Peligroso?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git reset archivo</code></td>
+<td>Saca un archivo de la cesta (no pierdes el cambio)</td>
+<td>🟢 Seguro</td>
+</tr>
+<tr>
+<td><code>git checkout -- archivo</code></td>
+<td>Descarta los cambios del archivo, vuelve al último commit</td>
+<td>🔴 <strong>Peligroso, se pierde el cambio</strong></td>
+</tr>
+<tr>
+<td><code>git stash</code></td>
+<td>Guarda los cambios a un lado temporalmente</td>
+<td>🟢 Seguro</td>
+</tr>
+<tr>
+<td><code>git stash pop</code></td>
+<td>Recupera lo guardado con <code>stash</code></td>
+<td>🟢 Seguro</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ignorar-archivos-gitignore">Ignorar archivos: <code>.gitignore</code><a class="headerlink" href="#ignorar-archivos-gitignore" title="Permanent link">&para;</a></h3>
+<p>Crea un archivo llamado <code>.gitignore</code> en la raíz del proyecto con los archivos/carpetas que <strong>no</strong> quieres subir (ficheros compilados, carpetas de configuración del IDE, contraseñas...):</p>
+<div class="highlight"><pre><span></span><code>*.class
+/bin/
+.vscode/
+</code></pre></div>
+<p>Hay plantillas ya hechas para casi cualquier lenguaje en <a href="https://github.com/github/gitignore">github.com/github/gitignore</a>.</p>
+<hr />
+<h2 id="5-pasar-a-lo-remoto-github">5. Pasar a lo remoto: GitHub<a class="headerlink" href="#5-pasar-a-lo-remoto-github" title="Permanent link">&para;</a></h2>
+<p>Hasta ahora todo ha sido en tu ordenador. Para compartirlo o hacer copia de seguridad, lo subimos a GitHub:</p>
+<div class="highlight"><pre><span></span><code>flowchart LR
+    A["💻 Repositorio local"] --&gt;|"git push"| B["🌐 Repositorio remoto&lt;br/&gt;(GitHub)"]
+    B --&gt;|"git pull"| A
+    B --&gt;|"git clone"| C["💻 Nuevo equipo"]
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git clone URL</code></td>
+<td>Descarga un repositorio remoto completo a tu ordenador</td>
+</tr>
+<tr>
+<td><code>git push</code></td>
+<td>Sube tus commits locales a GitHub</td>
+</tr>
+<tr>
+<td><code>git pull</code></td>
+<td>Descarga y fusiona los cambios que hay en GitHub</td>
+</tr>
+<tr>
+<td><code>git remote -v</code></td>
+<td>Muestra a qué repositorio remoto estás conectado</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-ramas-branches">6. Ramas (<em>branches</em>)<a class="headerlink" href="#6-ramas-branches" title="Permanent link">&para;</a></h2>
+<p>Una rama es una <strong>línea de trabajo independiente</strong>. Te permite probar cosas o desarrollar una funcionalidad sin tocar el código que ya funciona.</p>
+<div class="highlight"><pre><span></span><code>%%{init: {'gitGraph': {'showBranches': true}}}%%
+gitGraph
+   commit id: "inicio"
+   commit id: "login"
+   branch feature-carrito
+   checkout feature-carrito
+   commit id: "añade carrito"
+   commit id: "arregla bug"
+   checkout main
+   merge feature-carrito
+   commit id: "release"
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git branch</code></td>
+<td>Lista las ramas que tienes</td>
+</tr>
+<tr>
+<td><code>git branch nombre-rama</code></td>
+<td>Crea una rama nueva</td>
+</tr>
+<tr>
+<td><code>git checkout nombre-rama</code></td>
+<td>Cambia a esa rama</td>
+</tr>
+<tr>
+<td><code>git checkout -b nombre-rama</code></td>
+<td>Crea la rama <strong>y</strong> cambia a ella en un solo paso</td>
+</tr>
+<tr>
+<td><code>git merge nombre-rama</code></td>
+<td>Fusiona esa rama con la actual</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Conflictos de fusión</p>
+<p>Si dos ramas modifican <strong>la misma línea</strong> del mismo archivo de forma distinta, Git no sabe cuál te interesa y te pide que decidas tú. Esto es un <strong>conflicto</strong>: no es un error, es Git pidiéndote ayuda.</p>
+</div>
+<hr />
+<h2 id="7-trabajo-colaborativo-en-github-fork-pull-request">7. Trabajo colaborativo en GitHub: Fork + Pull Request<a class="headerlink" href="#7-trabajo-colaborativo-en-github-fork-pull-request" title="Permanent link">&para;</a></h2>
+<p>Este es el flujo habitual cuando colaboras en un proyecto que no es tuyo (o en las prácticas en grupo):</p>
+<div class="highlight"><pre><span></span><code>flowchart TD
+    A["Repositorio original"] --&gt;|"1. Fork"| B["Tu copia en GitHub"]
+    B --&gt;|"2. git clone"| C["Tu equipo local"]
+    C --&gt;|"3. Rama + commits"| C
+    C --&gt;|"4. git push"| B
+    B --&gt;|"5. Pull Request"| A
+    A --&gt;|"6. Revisión + Merge"| A
+</code></pre></div>
+<ol>
+<li><strong>Fork:</strong> te copias el repositorio a tu cuenta de GitHub.</li>
+<li><strong>Clone:</strong> te lo bajas a tu ordenador.</li>
+<li>Trabajas en una <strong>rama</strong>, haciendo tus commits.</li>
+<li><strong>Push:</strong> subes la rama a tu copia (<em>fork</em>) en GitHub.</li>
+<li><strong>Pull Request (PR):</strong> le pides al proyecto original que incorpore tus cambios.</li>
+<li>El dueño del proyecto revisa tu código (<em>code review</em>) y, si está bien, lo fusiona (<em>merge</em>).</li>
+</ol>
+<hr />
+<h2 id="8-buenas-practicas">8. Buenas prácticas 💡<a class="headerlink" href="#8-buenas-practicas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Haz <strong>commits pequeños y frecuentes</strong>, no un único commit gigante al final del día.</li>
+<li>Escribe mensajes de commit <strong>en presente e imperativo</strong>: "Añade", "Corrige", "Elimina"...</li>
+<li>Una <strong>rama por funcionalidad o por bug</strong>, no trabajes siempre directamente sobre <code>main</code>.</li>
+<li>Añade un <code>.gitignore</code> <strong>desde el primer commit</strong> del proyecto.</li>
+<li>Antes de empezar a trabajar cada día, haz <code>git pull</code> para tener la última versión.</li>
+<li>Nunca subas contraseñas, claves de API ni datos personales a un repositorio.</li>
+</ul>
+<hr />
+<h2 id="9-chuleta-resumen">9. Chuleta resumen<a class="headerlink" href="#9-chuleta-resumen" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Quiero...</th>
+<th>Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Crear un repositorio</td>
+<td><code>git init</code></td>
+</tr>
+<tr>
+<td>Ver el estado de mis archivos</td>
+<td><code>git status</code></td>
+</tr>
+<tr>
+<td>Ver qué he cambiado</td>
+<td><code>git diff</code></td>
+</tr>
+<tr>
+<td>Preparar cambios para guardarlos</td>
+<td><code>git add archivo</code> / <code>git add .</code></td>
+</tr>
+<tr>
+<td>Guardar una versión</td>
+<td><code>git commit -m "mensaje"</code></td>
+</tr>
+<tr>
+<td>Ver el historial</td>
+<td><code>git log --graph</code></td>
+</tr>
+<tr>
+<td>Crear y cambiar de rama</td>
+<td><code>git checkout -b nombre-rama</code></td>
+</tr>
+<tr>
+<td>Fusionar una rama</td>
+<td><code>git merge nombre-rama</code></td>
+</tr>
+<tr>
+<td>Clonar un repositorio remoto</td>
+<td><code>git clone URL</code></td>
+</tr>
+<tr>
+<td>Subir cambios a GitHub</td>
+<td><code>git push</code></td>
+</tr>
+<tr>
+<td>Bajar cambios de GitHub</td>
+<td><code>git pull</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="10-para-saber-mas">10. Para saber más<a class="headerlink" href="#10-para-saber-mas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://git-scm.com/book/es/v2/">Libro de Git en español</a> — la referencia completa y gratuita.</li>
+<li><a href="https://training.github.com/downloads/es_ES/github-git-cheat-sheet.pdf">Hoja de referencia oficial de GitHub (PDF)</a></li>
+<li><a href="https://github.com/github/gitignore">github.com/github/gitignore</a> — plantillas de <code>.gitignore</code> por lenguaje.</li>
+<li>Curso "Gestión de la tarea docente con GitHub" (Pedro Prieto, CEFIRE): <a href="https://github.com/pedroprieto/curso-github">github.com/pedroprieto/curso-github</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
