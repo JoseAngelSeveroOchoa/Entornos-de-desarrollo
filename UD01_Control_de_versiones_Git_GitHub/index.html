@@ -963,14 +963,21 @@ git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"
 <hr />
 <h2 id="3-el-ciclo-de-vida-de-un-archivo-en-git">3. El ciclo de vida de un archivo en Git<a class="headerlink" href="#3-el-ciclo-de-vida-de-un-archivo-en-git" title="Permanent link">&para;</a></h2>
 <p>Esta es <strong>la idea más importante</strong> de toda la unidad. Un archivo pasa por tres "sitios" antes de quedar guardado de verdad:</p>
-<div class="highlight"><pre><span></span><code>flowchart LR
+<pre class="mermaid"><code>flowchart LR
     A["📁 Directorio de trabajo&lt;br/&gt;(tus archivos tal cual los ves)"] --&gt;|"git add"| B["📦 Área de preparación&lt;br/&gt;(stage)"]
-    B --&gt;|"git commit"| C["💾 Repositorio local&lt;br/&gt;(historial guardado)"]
-</code></pre></div>
+    B --&gt;|"git commit"| C["💾 Repositorio local&lt;br/&gt;(historial guardado)"]</code></pre>
 <ul>
 <li><strong>Directorio de trabajo:</strong> donde editas tus archivos normalmente.</li>
 <li><strong>Área de preparación (<em>stage</em>):</strong> una "cesta" donde vas metiendo los cambios que quieres guardar en la próxima versión.</li>
 <li><strong>Repositorio:</strong> el historial real, con todas las versiones (commits) ya confirmadas.</li>
+</ul>
+<p>En detalle, un archivo puede estar en cuatro estados distintos, y estos son los comandos que lo mueven de uno a otro:</p>
+<p><img alt="Estados de un archivo en Git: untracked, modified, staged y committed" src="../images/ud01-zonas-git.svg" /></p>
+<ul>
+<li>🆕 <strong>Untracked:</strong> archivo nuevo que Git todavía no vigila.</li>
+<li>✏️ <strong>Modified:</strong> archivo que Git ya conoce, pero que has cambiado desde el último commit.</li>
+<li>✅ <strong>Staged:</strong> ya está en la cesta (<code>git add</code>), listo para el próximo commit.</li>
+<li>💿 <strong>Committed:</strong> ya forma parte del historial (<code>git commit</code>).</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Truco para entenderlo</p>
@@ -1066,11 +1073,10 @@ Se navega con las flechas ↑ ↓ y se sale pulsando <code>q</code>.</p>
 <hr />
 <h2 id="5-pasar-a-lo-remoto-github">5. Pasar a lo remoto: GitHub<a class="headerlink" href="#5-pasar-a-lo-remoto-github" title="Permanent link">&para;</a></h2>
 <p>Hasta ahora todo ha sido en tu ordenador. Para compartirlo o hacer copia de seguridad, lo subimos a GitHub:</p>
-<div class="highlight"><pre><span></span><code>flowchart LR
+<pre class="mermaid"><code>flowchart LR
     A["💻 Repositorio local"] --&gt;|"git push"| B["🌐 Repositorio remoto&lt;br/&gt;(GitHub)"]
     B --&gt;|"git pull"| A
-    B --&gt;|"git clone"| C["💻 Nuevo equipo"]
-</code></pre></div>
+    B --&gt;|"git clone"| C["💻 Nuevo equipo"]</code></pre>
 <table>
 <thead>
 <tr>
@@ -1100,7 +1106,7 @@ Se navega con las flechas ↑ ↓ y se sale pulsando <code>q</code>.</p>
 <hr />
 <h2 id="6-ramas-branches">6. Ramas (<em>branches</em>)<a class="headerlink" href="#6-ramas-branches" title="Permanent link">&para;</a></h2>
 <p>Una rama es una <strong>línea de trabajo independiente</strong>. Te permite probar cosas o desarrollar una funcionalidad sin tocar el código que ya funciona.</p>
-<div class="highlight"><pre><span></span><code>%%{init: {'gitGraph': {'showBranches': true}}}%%
+<pre class="mermaid"><code>%%{init: {'gitGraph': {'showBranches': true}}}%%
 gitGraph
    commit id: "inicio"
    commit id: "login"
@@ -1110,8 +1116,7 @@ gitGraph
    commit id: "arregla bug"
    checkout main
    merge feature-carrito
-   commit id: "release"
-</code></pre></div>
+   commit id: "release"</code></pre>
 <table>
 <thead>
 <tr>
@@ -1149,14 +1154,13 @@ gitGraph
 <hr />
 <h2 id="7-trabajo-colaborativo-en-github-fork-pull-request">7. Trabajo colaborativo en GitHub: Fork + Pull Request<a class="headerlink" href="#7-trabajo-colaborativo-en-github-fork-pull-request" title="Permanent link">&para;</a></h2>
 <p>Este es el flujo habitual cuando colaboras en un proyecto que no es tuyo (o en las prácticas en grupo):</p>
-<div class="highlight"><pre><span></span><code>flowchart TD
+<pre class="mermaid"><code>flowchart TD
     A["Repositorio original"] --&gt;|"1. Fork"| B["Tu copia en GitHub"]
     B --&gt;|"2. git clone"| C["Tu equipo local"]
     C --&gt;|"3. Rama + commits"| C
     C --&gt;|"4. git push"| B
     B --&gt;|"5. Pull Request"| A
-    A --&gt;|"6. Revisión + Merge"| A
-</code></pre></div>
+    A --&gt;|"6. Revisión + Merge"| A</code></pre>
 <ol>
 <li><strong>Fork:</strong> te copias el repositorio a tu cuenta de GitHub.</li>
 <li><strong>Clone:</strong> te lo bajas a tu ordenador.</li>
