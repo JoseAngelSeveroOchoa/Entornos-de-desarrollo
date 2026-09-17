@@ -254,7 +254,7 @@ Los lenguajes utilizan variables y constantes para almacenar datos a lo largo de
 
 ## Evolución de los lenguajes de programación
 
-![Diagrama de evolución de los lenguajes de programación desde 1956 hasta la actualidad](images/10-evolucion-lenguajes.jpg)
+![Diagrama de evolución de los lenguajes de programación desde 1956 hasta la actualidad](images/10-evolucion-lenguajes.png)
 
 *Fuente: [rigaux.org/language-study](http://rigaux.org/language-study/diagram-light.png)*
 

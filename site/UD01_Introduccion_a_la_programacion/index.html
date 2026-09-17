@@ -1802,19 +1802,27 @@
 <p>Los lenguajes utilizan variables y constantes para almacenar datos a lo largo de la ejecución de un programa. La forma en que gestionan y comprueban los tipos de datos se clasifica según dos criterios:</p>
 <h3 id="1-segun-cuando-se-comprueba-el-tipo-estatico-vs-dinamico">1. Según cuándo se comprueba el tipo (Estático vs. Dinámico)<a class="headerlink" href="#1-segun-cuando-se-comprueba-el-tipo-estatico-vs-dinamico" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Tipado estático:</strong> El tipo de una variable se define o infiere durante la fase de compilación (antes de ejecutar el programa). Una variable no puede cambiar de tipo.</li>
+<li><strong>Tipado estático:</strong> El tipo de una variable se define o infiere durante la fase de compilación (antes de ejecutar el programa). Una variable no puede cambiar de tipo.<ul>
 <li><em>Ejemplos:</em> Java, C, C++, Rust.</li>
-<li><strong>Tipado dinámico:</strong> El tipo no se asocia a la variable, sino al valor que contiene en cada momento. Se evalúa en tiempo de ejecución y una misma variable puede reasignarse con datos de distinto tipo.</li>
+</ul>
+</li>
+<li><strong>Tipado dinámico:</strong> El tipo no se asocia a la variable, sino al valor que contiene en cada momento. Se evalúa en tiempo de ejecución y una misma variable puede reasignarse con datos de distinto tipo.<ul>
 <li><em>Ejemplos:</em> Python, JavaScript, PHP.</li>
+</ul>
+</li>
 </ul>
 <h3 id="2-segun-la-tolerancia-a-las-conversiones-implicitas-fuerte-vs-debil">2. Según la tolerancia a las conversiones implícitas (Fuerte vs. Débil)<a class="headerlink" href="#2-segun-la-tolerancia-a-las-conversiones-implicitas-fuerte-vs-debil" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Tipado fuerte:</strong> El lenguaje no permite realizar operaciones entre tipos incompatibles sin una conversión explícita. Evita la conversión implícita no intencionada.</li>
+<li><strong>Tipado fuerte:</strong> El lenguaje no permite realizar operaciones entre tipos incompatibles sin una conversión explícita. Evita la conversión implícita no intencionada.<ul>
 <li><em>Ejemplos:</em> Python, Java. </li>
 <li><em>En Python:</em> <code>"Texto" + 5</code> produce un error (<code>TypeError</code>).</li>
-<li><strong>Tipado débil:</strong> El lenguaje realiza conversiones implícitas de tipo (coerción) de forma automática al combinar distintos tipos en una operación.</li>
+</ul>
+</li>
+<li><strong>Tipado débil:</strong> El lenguaje realiza conversiones implícitas de tipo (coerción) de forma automática al combinar distintos tipos en una operación.<ul>
 <li><em>Ejemplos:</em> JavaScript, C.</li>
 <li><em>En JavaScript:</em> <code>"Texto" + 5</code> convierte el <code>5</code> a cadena y da <code>"Texto5"</code>.</li>
+</ul>
+</li>
 </ul>
 <h2 id="evolucion-de-los-lenguajes-de-programacion">Evolución de los lenguajes de programación<a class="headerlink" href="#evolucion-de-los-lenguajes-de-programacion" title="Permanent link">&para;</a></h2>
 <p><img alt="Diagrama de evolución de los lenguajes de programación desde 1956 hasta la actualidad" src="../images/10-evolucion-lenguajes.jpg" /></p>
